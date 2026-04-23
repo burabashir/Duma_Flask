@@ -65,10 +65,10 @@ def signin():
     count = cursor.rowcount
     # if condition to check row number
     if count == 0 :
-        return jsonify ({"Message": "Sign in failed"})
+        return jsonify ({"Error": "Sign in failed"})
     else:
         user = cursor.fetchone()
-        return jsonify ({"Message": "Sign in successful" , "user" : user})
+        return jsonify ({"Success": "Sign in successful" , "user" : user})
 
 
 
